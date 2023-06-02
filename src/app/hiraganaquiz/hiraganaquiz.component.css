@@ -1,0 +1,38 @@
+.multiple-choice {
+  text-align: center;
+  margin: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.option {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option p {
+  font-size: 24px;
+}
+
+.stats {
+  margin-top: 20px;
+}
+
+.stats p {
+  margin: 5px;
+}

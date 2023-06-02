@@ -3,16 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import {RouterOutlet} from "@angular/router";
+import {AppRoutingModule} from "./app-routing.module";
+import { HiraganaComponent } from './hiragana/hiragana.component';
+import { HiraganachartComponent } from './hiraganachart/hiraganachart.component';
+import { HiraganaquizComponent } from './hiraganaquiz/hiraganaquiz.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HiraganaComponent,
+    HiraganachartComponent,
+    HiraganaquizComponent
   ],
   imports: [
     BrowserModule,
-    RouterOutlet
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

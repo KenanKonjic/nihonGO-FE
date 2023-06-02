@@ -20,4 +20,9 @@ export class HiraganaComponent {
       'hiraganaquiz'
     ])
   }
+  navigateToHiraganaTest(): void{
+    this.router.navigate([
+      'hiraganatest'
+    ])
+  }
 }

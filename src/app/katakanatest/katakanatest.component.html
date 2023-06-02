@@ -1,0 +1,49 @@
+<div class="katakana-test">
+  <h2>Katakana Test</h2>
+
+  <p class="welcome">Welcome to the Katakana Test! In this test, you will be presented with 20 random katakana symbols,
+    and your task is to enter the correct pronunciation for each symbol. You have 3 minutes to complete the test.
+    If you correctly answer 80% or more of the questions, you will pass the test. Good luck!</p>
+
+  <div *ngIf="!testStarted">
+    <button (click)="startTest()">Start Test</button>
+  </div>
+
+  <div *ngIf="testStarted && !testFinished">
+    <div class="question">
+      <p>Question {{ currentQuestionIndex }} of {{ totalQuestions }}</p>
+      <p>How is this symbol pronounced: <strong>{{ currentSymbol }}</strong></p>
+      <input type="text" [(ngModel)]="userAnswer" (keyup.enter)="submitAnswer()">
+      <button (click)="submitAnswer()">Submit</button>
+      <button (click)="skipQuestion()">Skip</button>
+    </div>
+
+    <div class="timer">
+      <p>Time Remaining: {{ formatTimeRemaining() }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="testFinished">
+    <h3>Test Results</h3>
+
+    <div class="summary">
+      <p>Questions Answered: {{ questionsAnswered }}</p>
+      <p>Correct Answers: {{ correctAnswers }}</p>
+      <p>Passing Score: {{ passingScore }}%</p>
+      <p>Result: {{ testResult }}</p>
+    </div>
+
+    <h3>Review</h3>
+
+    <div class="review">
+      <div *ngFor="let question of questionReview; let i = index" [ngClass]="{ 'correct': question.correct, 'incorrect': !question.correct }">
+        <p>Question {{ i + 1 }}:</p>
+        <p>How is this symbol pronounced: <strong>{{ question.symbol }}</strong></p>
+        <p>Your Answer: {{ question.userAnswer }}</p>
+        <p>Correct Answer: {{ question.correctAnswer }}</p>
+      </div>
+    </div>
+
+    <button (click)="retryTest()">Retry Test</button>
+  </div>
+</div>

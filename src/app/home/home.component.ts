@@ -16,5 +16,10 @@ export class HomeComponent {
       'hiragana'
     ])
   }
+  navigateToKatakana(): void{
+    this.router.navigate([
+      'katakana'
+    ])
+  }
 
 }

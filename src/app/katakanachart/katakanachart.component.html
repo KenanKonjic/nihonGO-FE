@@ -1,0 +1,14 @@
+<div class="katakana-chart">
+  <h2>Hiragana Chart</h2>
+  <table>
+    <tr>
+      <th>Character</th>
+      <th>Pronunciation</th>
+    </tr>
+    <tr *ngFor="let character of katakanaCharacters">
+      <td>{{ character.symbol }}</td>
+      <td>{{ character.pronunciation }}</td>
+    </tr>
+  </table>
+</div>
+

@@ -1,0 +1,44 @@
+.welcome{
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+.katakana-test {
+  text-align: center;
+  margin: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.timer {
+  margin-top: 20px;
+}
+
+.review {
+  margin-top: 20px;
+}
+
+.review div {
+  margin-bottom: 10px;
+}
+
+.correct {
+  color: green;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.incorrect {
+  color: red;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.summary p {
+  margin: 5px;
+}

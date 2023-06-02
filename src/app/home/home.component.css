@@ -1,0 +1,23 @@
+.container{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(44,25,135,1) 44%, rgba(169,0,255,1) 100%);
+  background-size: cover;
+  margin: 0px;
+  width: 100%;
+}
+
+.title{
+  margin: auto;
+  width: 25%;
+  padding: 5% 10px 10px;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.welcome{
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}

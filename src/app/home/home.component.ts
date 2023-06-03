@@ -36,5 +36,10 @@ export class HomeComponent {
       'culture'
     ])
   }
+  navigateToReading(): void{
+    this.router.navigate([
+      'reading'
+    ])
+  }
 
 }

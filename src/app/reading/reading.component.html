@@ -1,0 +1,26 @@
+  <div class="reading-practice">
+    <h1 class="title">Reading Practice</h1>
+    <p class="welcome">Welcome to the Reading Practice page. Improve your reading skills by practicing with various Japanese texts and passages.</p>
+    <div *ngIf="currentPassage">
+      <p class="passage">
+        <ruby>{{ currentPassage.passage }}<rt>{{ currentPassage.furigana }}</rt></ruby>
+      </p>
+      <div class="question">
+        <p>{{ currentPassage.questions[0].question }}</p>
+        <div *ngFor="let choice of currentPassage.questions[0].choices; let i = index">
+          <label>
+            <input type="radio" [(ngModel)]="userAnswers[currentPassageIndex]" [value]="i">
+            {{ choice }}
+          </label>
+        </div>
+      </div>
+      <button class="submit-button" (click)="checkAnswer()">Check Answer</button>
+      <div class="result" *ngIf="showResults">
+        <p class="answer" [ngClass]="{'correct': isAnswerCorrect(0, userAnswers[currentPassageIndex]), 'incorrect': !isAnswerCorrect(0, userAnswers[currentPassageIndex])}">
+          Your answer: {{ currentPassage.questions[0].choices[userAnswers[currentPassageIndex]] }}
+        </p>
+      </div>
+      <button class="previous-button" *ngIf="currentPassageIndex > 0" (click)="previousPassage()">Previous Passage</button>
+      <button class="next-button" *ngIf="currentPassageIndex < passages.length - 1" (click)="nextPassage()">Next Passage</button>
+    </div>
+  </div>

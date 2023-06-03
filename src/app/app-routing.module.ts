@@ -12,6 +12,7 @@ import {KatakanatestComponent} from "./katakanatest/katakanatest.component";
 import {VocabComponent} from "./vocab/vocab.component";
 import {GrammarComponent} from "./grammar/grammar.component";
 import {CulturalComponent} from "./cultural/cultural.component";
+import {ReadingComponent} from "./reading/reading.component";
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'culture',
     component: CulturalComponent,
+  },
+  {
+    path: 'reading',
+    component: ReadingComponent,
   },
 ];
 

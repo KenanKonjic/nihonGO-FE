@@ -1,0 +1,13 @@
+<div class="cultural-insights">
+  <h2 class="title">Cultural Insights</h2>
+  <div class="welcome">
+    <p>Explore the rich cultural heritage of Japan through these fascinating insights. From traditional rituals to iconic symbols, immerse yourself in the captivating aspects of Japanese culture.</p>
+  </div>
+  <div class="insights-container">
+    <div class="insight" *ngFor="let insight of insights">
+      <h3 class="insight-title">{{ insight.title }}</h3>
+      <p class="insight-description">{{ insight.description }}</p>
+      <img [src]="insight.image" alt="Cultural Insight Image" class="insight-image">
+    </div>
+  </div>
+</div>

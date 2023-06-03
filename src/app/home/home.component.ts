@@ -31,5 +31,10 @@ export class HomeComponent {
       'grammar'
     ])
   }
+  navigateToCulture(): void{
+    this.router.navigate([
+      'culture'
+    ])
+  }
 
 }

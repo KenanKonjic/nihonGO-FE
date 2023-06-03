@@ -14,6 +14,7 @@ import { KatakanaquizComponent } from './katakanaquiz/katakanaquiz.component';
 import { KatakanatestComponent } from './katakanatest/katakanatest.component';
 import { KatakanachartComponent } from './katakanachart/katakanachart.component';
 import { VocabComponent } from './vocab/vocab.component';
+import { GrammarComponent } from './grammar/grammar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { VocabComponent } from './vocab/vocab.component';
     KatakanaquizComponent,
     KatakanatestComponent,
     KatakanachartComponent,
-    VocabComponent
+    VocabComponent,
+    GrammarComponent
   ],
   imports: [
     BrowserModule,

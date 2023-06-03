@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="title">Grammar Lessons</h1>
+  <p class="welcome">Welcome to the Grammar Lessons page! Here, you will find various grammar topics and examples to enhance your understanding of Japanese grammar. Explore the lessons below to improve your language skills.</p>
+
+  <div *ngFor="let lesson of lessons" class="lesson">
+    <h2>{{ lesson.title }}</h2>
+    <p>{{ lesson.description }}</p>
+    <ul>
+      <li *ngFor="let example of lesson.examples">{{ example }}</li>
+    </ul>
+  </div>
+</div>

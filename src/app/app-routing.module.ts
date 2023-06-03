@@ -10,6 +10,7 @@ import {KatakanachartComponent} from "./katakanachart/katakanachart.component";
 import {KatakanaquizComponent} from "./katakanaquiz/katakanaquiz.component";
 import {KatakanatestComponent} from "./katakanatest/katakanatest.component";
 import {VocabComponent} from "./vocab/vocab.component";
+import {GrammarComponent} from "./grammar/grammar.component";
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'vocab',
     component: VocabComponent,
+  },
+  {
+    path: 'grammar',
+    component: GrammarComponent,
   },
 ];
 

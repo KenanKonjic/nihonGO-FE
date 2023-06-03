@@ -26,5 +26,10 @@ export class HomeComponent {
       'vocab'
     ])
   }
+  navigateToGrammar(): void{
+    this.router.navigate([
+      'grammar'
+    ])
+  }
 
 }

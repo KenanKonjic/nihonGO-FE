@@ -1,0 +1,15 @@
+<p class="title">Vocabulary and Phrases</p>
+
+<p class="welcome"> Welcome to the Vocabulary and Phrases page! Here, you'll find a collection of essential Japanese words and useful phrases to expand your language skills.
+  Whether you're a beginner or looking to enhance your vocabulary, this section will help you broaden your knowledge and communicate more effectively in Japanese.
+  Explore the diverse range of words and phrases, each accompanied by its pronunciation and English translation.
+  Practice your pronunciation by listening to the audio recordings and reinforce your learning through interactive exercises.
+  Let's dive into the world of Japanese vocabulary and phrases, and take your language proficiency to new heights!</p>
+
+<div class="phrase" *ngFor="let word of vocabularyWords">
+  <h3>{{ word.word }}</h3>
+  <p>{{ word.meaning }}</p>
+  <p>Example: {{ word.example }}</p>
+  <audio [src]="word.audioUrl" controls></audio>
+</div>
+

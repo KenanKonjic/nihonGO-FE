@@ -21,5 +21,10 @@ export class HomeComponent {
       'katakana'
     ])
   }
+  navigateToVocab(): void{
+    this.router.navigate([
+      'vocab'
+    ])
+  }
 
 }

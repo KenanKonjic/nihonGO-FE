@@ -15,6 +15,7 @@ import { KatakanatestComponent } from './katakanatest/katakanatest.component';
 import { KatakanachartComponent } from './katakanachart/katakanachart.component';
 import { VocabComponent } from './vocab/vocab.component';
 import { GrammarComponent } from './grammar/grammar.component';
+import { CulturalComponent } from './cultural/cultural.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { GrammarComponent } from './grammar/grammar.component';
     KatakanatestComponent,
     KatakanachartComponent,
     VocabComponent,
-    GrammarComponent
+    GrammarComponent,
+    CulturalComponent
   ],
   imports: [
     BrowserModule,

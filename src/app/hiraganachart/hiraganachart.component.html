@@ -1,13 +1,142 @@
 <div class="hiragana-chart">
-  <h2>Hiragana Chart</h2>
+  <h2 class="title">Hiragana Chart</h2>
+  <div class="chart">
   <table>
     <tr>
-      <th>Character</th>
-      <th>Pronunciation</th>
+      <th></th>
+      <th class="kana">a</th>
+      <th class="kana">i</th>
+      <th class="kana">u</th>
+      <th class="kana">e</th>
+      <th class="kana">o</th>
     </tr>
-    <tr *ngFor="let character of hiraganaCharacters">
-      <td>{{ character.symbol }}</td>
-      <td>{{ character.pronunciation }}</td>
+    <tr>
+      <th class="kana"></th>
+      <td class="kana" data-audio="assets/audio/a.mp3">あ</td>
+      <td class="kana" data-audio="assets/audio/i.mp3">い</td>
+      <td class="kana" data-audio="assets/audio/u.mp3">う</td>
+      <td class="kana" data-audio="assets/audio/e.mp3">え</td>
+      <td class="kana" data-audio="assets/audio/o.mp3">お</td>
+    </tr>
+    <tr>
+      <th class="kana">k</th>
+      <td class="kana" data-audio="assets/audio/ka.mp3">か</td>
+      <td class="kana" data-audio="assets/audio/ki.mp3">き</td>
+      <td class="kana" data-audio="assets/audio/ku.mp3">く</td>
+      <td class="kana" data-audio="assets/audio/ke.mp3">け</td>
+      <td class="kana" data-audio="assets/audio/ko.mp3">こ</td>
+    </tr>
+    <tr>
+      <th class="kana">s</th>
+      <td class="kana" data-audio="assets/audio/sa.mp3">さ</td>
+      <td class="kana" data-audio="assets/audio/shi.mp3">し</td>
+      <td class="kana" data-audio="assets/audio/su.mp3">す</td>
+      <td class="kana" data-audio="assets/audio/se.mp3">せ</td>
+      <td class="kana" data-audio="assets/audio/so.mp3">そ</td>
+    </tr>
+    <tr>
+      <th class="kana">t</th>
+      <td class="kana" data-audio="assets/audio/ta.mp3">た</td>
+      <td class="kana" data-audio="assets/audio/chi.mp3">ち</td>
+      <td class="kana" data-audio="assets/audio/tsu.mp3">つ</td>
+      <td class="kana" data-audio="assets/audio/te.mp3">て</td>
+      <td class="kana" data-audio="assets/audio/to.mp3">と</td>
+    </tr>
+    <tr>
+      <th class="kana">n</th>
+      <td class="kana" data-audio="assets/audio/na.mp3">な</td>
+      <td class="kana" data-audio="assets/audio/ni.mp3">に</td>
+      <td class="kana" data-audio="assets/audio/nu.mp3">ぬ</td>
+      <td class="kana" data-audio="assets/audio/ne.mp3">ね</td>
+      <td class="kana" data-audio="assets/audio/no.mp3">の</td>
+    </tr>
+    <tr>
+      <th class="kana">h</th>
+      <td class="kana" data-audio="assets/audio/ha.mp3">は</td>
+      <td class="kana" data-audio="assets/audio/hi.mp3">ひ</td>
+      <td class="kana" data-audio="assets/audio/fu.mp3">ふ</td>
+      <td class="kana" data-audio="assets/audio/he.mp3">へ</td>
+      <td class="kana" data-audio="assets/audio/ho.mp3">ほ</td>
+    </tr>
+    <tr>
+      <th class="kana">m</th>
+      <td class="kana" data-audio="assets/audio/ma.mp3">ま</td>
+      <td class="kana" data-audio="assets/audio/mi.mp3">み</td>
+      <td class="kana" data-audio="assets/audio/mu.mp3">む</td>
+      <td class="kana" data-audio="assets/audio/me.mp3">め</td>
+      <td class="kana" data-audio="assets/audio/mo.mp3">も</td>
+    </tr>
+    <tr>
+      <th class="kana">y</th>
+      <td class="kana" data-audio="assets/audio/ya.mp3">や</td>
+      <td></td>
+      <td class="kana" data-audio="assets/audio/yu.mp3">ゆ</td>
+      <td></td>
+      <td class="kana" data-audio="assets/audio/yo.mp3">よ</td>
+    </tr>
+    <tr>
+      <th class="kana">r</th>
+      <td class="kana" data-audio="assets/audio/ra.mp3">ら</td>
+      <td class="kana" data-audio="assets/audio/ri.mp3">り</td>
+      <td class="kana" data-audio="assets/audio/ru.mp3">る</td>
+      <td class="kana" data-audio="assets/audio/re.mp3">れ</td>
+      <td class="kana" data-audio="assets/audio/ro.mp3">ろ</td>
+    </tr>
+    <tr>
+      <th class="kana">w</th>
+      <td class="kana" data-audio="assets/audio/wa.mp3">わ</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td class="kana" data-audio="assets/audio/wo.mp3">を</td>
+    </tr>
+    <tr>
+      <th class="kana">n</th>
+      <td colspan="5" class="kana" data-audio="assets/audio/n.mp3">ん</td>
+    </tr>
+    <tr>
+      <td class="kana" colspan="6">dakuon</td>
+    </tr>
+    <tr>
+      <th class="kana">g</th>
+      <td class="kana" data-audio="assets/audio/ga.mp3">が</td>
+      <td class="kana" data-audio="assets/audio/gi.mp3">ぎ</td>
+      <td class="kana" data-audio="assets/audio/gu.mp3">ぐ</td>
+      <td class="kana" data-audio="assets/audio/ge.mp3">げ</td>
+      <td class="kana" data-audio="assets/audio/go.mp3">ご</td>
+    </tr>
+    <tr>
+      <th class="kana">z</th>
+      <td class="kana" data-audio="assets/audio/za.mp3">ざ</td>
+      <td class="kana" data-audio="assets/audio/zi.mp3">じ</td>
+      <td class="kana" data-audio="assets/audio/zu.mp3">ず</td>
+      <td class="kana" data-audio="assets/audio/ze.mp3">ぜ</td>
+      <td class="kana" data-audio="assets/audio/zo.mp3">ぞ</td>
+    </tr>
+    <tr>
+      <th class="kana">d</th>
+      <td class="kana" data-audio="assets/audio/da.mp3">だ</td>
+      <td class="kana" data-audio="assets/audio/di.mp3">ぢ</td>
+      <td class="kana" data-audio="assets/audio/du.mp3">づ</td>
+      <td class="kana" data-audio="assets/audio/de.mp3">で</td>
+      <td class="kana" data-audio="assets/audio/do.mp3">ど</td>
+    </tr>
+    <tr>
+      <th class="kana">b</th>
+      <td class="kana" data-audio="assets/audio/ba.mp3">ば</td>
+      <td class="kana" data-audio="assets/audio/bi.mp3">び</td>
+      <td class="kana" data-audio="assets/audio/bu.mp3">ぶ</td>
+      <td class="kana" data-audio="assets/audio/be.mp3">べ</td>
+      <td class="kana" data-audio="assets/audio/bo.mp3">ぼ</td>
+    </tr>
+    <tr>
+      <th class="kana">p</th>
+      <td class="kana" data-audio="assets/audio/pa.mp3">ぱ</td>
+      <td class="kana" data-audio="assets/audio/pi.mp3">ぴ</td>
+      <td class="kana" data-audio="assets/audio/pu.mp3">ぷ</td>
+      <td class="kana" data-audio="assets/audio/pe.mp3">ぺ</td>
+      <td class="kana" data-audio="assets/audio/po.mp3">ぽ</td>
     </tr>
   </table>
+  </div>
 </div>

@@ -1,18 +1,50 @@
 .hiragana-chart {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
-table {
-  width: 100%;
+.hiragana-chart table {
   border-collapse: collapse;
+  width: 100%;
 }
 
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
+.hiragana-chart th {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  background-color: #eaf2f8;
 }
 
-th {
-  background-color: #f2f2f2;
+.hiragana-chart td {
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.hiragana-chart .title {
+  text-align: center;
+  margin-top: 0;
+}
+
+.hiragana-chart .kana {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hiragana-chart .romaji {
+  font-size: 14px;
+  color: #888;
+}
+
+.chart {
+  width: 60%;
+  margin: auto;
+
+}
+
+.title {
+  margin: auto;
+  width: 25%;
+  padding: 10px 10px 5%;
+  text-align: center;
+  font-size: xxx-large;
 }

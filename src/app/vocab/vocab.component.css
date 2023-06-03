@@ -1,0 +1,49 @@
+.title{
+  margin: auto;
+  width: 25%;
+  padding: 5% 10px 10px;
+  text-align: center;
+  font-size: xxx-large;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.welcome{
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+.phrase{
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  font-size: large;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+audio {
+  margin-top: 10px;
+}
+
+.vocabulary-word {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.vocabulary-word:last-child {
+  margin-bottom: 0;
+}

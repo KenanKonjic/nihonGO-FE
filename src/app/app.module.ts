@@ -13,6 +13,7 @@ import { KatakanaComponent } from './katakana/katakana.component';
 import { KatakanaquizComponent } from './katakanaquiz/katakanaquiz.component';
 import { KatakanatestComponent } from './katakanatest/katakanatest.component';
 import { KatakanachartComponent } from './katakanachart/katakanachart.component';
+import { VocabComponent } from './vocab/vocab.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { KatakanachartComponent } from './katakanachart/katakanachart.component'
     KatakanaComponent,
     KatakanaquizComponent,
     KatakanatestComponent,
-    KatakanachartComponent
+    KatakanachartComponent,
+    VocabComponent
   ],
   imports: [
     BrowserModule,

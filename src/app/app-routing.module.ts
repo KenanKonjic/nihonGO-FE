@@ -13,6 +13,10 @@ import {VocabComponent} from "./vocab/vocab.component";
 import {GrammarComponent} from "./grammar/grammar.component";
 import {CulturalComponent} from "./cultural/cultural.component";
 import {ReadingComponent} from "./reading/reading.component";
+import {LoginComponent} from "./login/login.component";
+import {SignupComponent} from "./signup/signup.component";
+import {HeaderComponent} from "./header/header.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 const routes: Routes = [
   {
@@ -66,6 +70,22 @@ const routes: Routes = [
   {
     path: 'reading',
     component: ReadingComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+  },
+  {
+    path: 'header',
+    component: HeaderComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
   },
 ];
 

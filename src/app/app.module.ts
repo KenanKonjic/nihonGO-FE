@@ -17,6 +17,10 @@ import { VocabComponent } from './vocab/vocab.component';
 import { GrammarComponent } from './grammar/grammar.component';
 import { CulturalComponent } from './cultural/cultural.component';
 import { ReadingComponent } from './reading/reading.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { ReadingComponent } from './reading/reading.component';
     VocabComponent,
     GrammarComponent,
     CulturalComponent,
-    ReadingComponent
+    ReadingComponent,
+    SignupComponent,
+    LoginComponent,
+    HeaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -41,10 +41,47 @@
 
 }
 
+.welcome{
+  margin: auto;
+  width: 40%;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: large;
+}
+
 .title {
   margin: auto;
   width: 25%;
-  padding: 10px 10px 5%;
+  padding: 10px 10px;
   text-align: center;
   font-size: xxx-large;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: xx-large;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .welcome {
+    font-size: medium;
+    width: 70%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hiragana-chart th{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .hiragana-chart td{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
 }

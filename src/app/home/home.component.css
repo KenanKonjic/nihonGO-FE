@@ -18,13 +18,13 @@
   margin: auto;
   width: 40%;
   padding: 10px;
-  text-align: center;
+  text-align: justify;
   font-size: large;
 }
 
 .container {
   margin: auto;
-  width: 50%;
+  width: 55%;
   display: flex;
   height: 200px;
   position: relative;
@@ -33,6 +33,7 @@
 
 .center {
   margin: auto;
+  padding: 15px;
 }
 
 button {
@@ -70,4 +71,23 @@ button:focus-visible{
 button:active {
   background: var(--color);
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: xx-large;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .welcome {
+    font-size: medium;
+    width: 70%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
 }

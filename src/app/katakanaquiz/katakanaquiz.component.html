@@ -3,12 +3,12 @@
 
   <div class="question">
     <h3>Which katakana character matches the given pronunciation?</h3>
-    <p>{{ pronunciation }}</p>
+    <h1 class="character">{{ pronunciation }}</h1>
   </div>
 
   <div class="options">
-    <div class="option" *ngFor="let option of options" (click)="checkAnswer(option)">
-      <p>{{ option }}</p>
+    <div class="option" *ngFor="let option of options" (click)="checkAnswer(option); playAudio(getPronunciation(option))">
+      <h1>{{ option }}</h1>
     </div>
   </div>
 
@@ -19,4 +19,3 @@
     <p>Ratio: {{ getRatio() }}</p>
   </div>
 </div>
-

@@ -3,6 +3,10 @@
   margin: 20px;
 }
 
+.character{
+  font-size: 30px;
+}
+
 .question {
   margin-bottom: 20px;
 }
@@ -39,4 +43,27 @@
 
 .stats p {
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: xx-large;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .welcome {
+    font-size: medium;
+    width: 70%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .option{
+    width: 40%;
+  }
+
 }

@@ -10,7 +10,7 @@
   margin: auto;
   width: 40%;
   padding: 10px;
-  text-align: center;
+  text-align: justify;
   font-size: large;
 }
 
@@ -62,4 +62,22 @@ button:focus-visible{
 button:active {
   background: var(--color);
   color: #fff;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: xx-large;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .welcome {
+    font-size: medium;
+    width: 70%;
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: column;
+  }
+
 }

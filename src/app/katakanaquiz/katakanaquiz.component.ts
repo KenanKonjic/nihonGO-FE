@@ -30,6 +30,13 @@ export class KatakanaquizComponent implements OnInit{
     this.showNextQuestion();
   }
 
+  playAudio(character: string): void {
+    const audio = new Audio();
+    audio.src = `assets/audio/${character}.mp3`;
+    audio.load();
+    audio.play();
+  }
+
   showNextQuestion(): void {
     this.options = this.getRandomOptions(4);
     const randomIndex = Math.floor(Math.random() * this.options.length);

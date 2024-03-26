@@ -1,41 +1,18 @@
 import { Injectable } from '@angular/core';
+import {UserModel} from "../models/user.model";
+import {environment} from "../../environments/environment";
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  private isAuthenticated: boolean = false;
+export class UserService {
 
-  login(username: string, password: string): boolean {
-    if (username === 'demo' && password === 'password') {
-      this.isAuthenticated = true;
-      return true;
-    }
-    return false;
+  private readonly baseUrl: string = `${environment.backendUrl}/user`;
+  constructor (private http: HttpClient) { }
+
+  searchUserByUsername(username: string): Observable<UserModel> {
+    return this.http.get<UserModel>(`${this.baseUrl}/search/${username}`);
   }
-
-  logout(): void {
-    this.isAuthenticated = false;
-  }
-
-  getProfile(): Profile {
-    const dummyProfile: Profile = {
-      username: 'demo',
-      email: 'demo@example.com',
-      firstName: 'John',
-      lastName: 'Doe',
-    };
-    return dummyProfile;
-  }
-
-  isAuthenticatedUser(): boolean {
-    return this.isAuthenticated;
-  }
-}
-
-interface Profile {
-  username: string;
-  email: string;
-  firstName: string;
-  lastName: string;
 }

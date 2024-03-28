@@ -36,7 +36,7 @@ export class LoginComponent {
         password: psw
       };
 
-      this.http.post<LoginResponse>('https://space-shuffle.herokuapp.com/authenticate', payload)
+      this.http.post<LoginResponse>('https://nihongo-392fc332c38f.herokuapp.com/authenticate', payload)
         .subscribe(
           (response) => {
             this.token = response.token;

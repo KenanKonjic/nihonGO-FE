@@ -29,7 +29,7 @@ export class SignupComponent implements OnInit{
         password: psw,
       };
 
-      this.http.post<string>('https://space-shuffle.herokuapp.com/signup', payload)
+      this.http.post<string>('https://nihongo-392fc332c38f.herokuapp.com/signup', payload)
         .subscribe(
           (response) => {
             console.log('Registration successful', response);

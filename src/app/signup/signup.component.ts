@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit{
         password: password,
       };
 
-      this.http.post<string>('https://nihongo-392fc332c38f.herokuapp.com/signup', payload)
+      this.http.post<string>('https://nihongo-392fc332c38f.herokuapp.com/register', payload)
         .subscribe(
           (response) => {
             console.log('Registration successful', response);
@@ -42,8 +42,4 @@ export class SignupComponent implements OnInit{
         );
     }
   }
-  navigateToLogin(): void{
-    this.router.navigate([
-      'login'
-    ])}
 }

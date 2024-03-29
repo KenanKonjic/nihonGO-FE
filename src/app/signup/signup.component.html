@@ -1,12 +1,8 @@
 <h2>Signup</h2>
-<form>
+<form [formGroup]="loginForm" (ngSubmit)="signup()">
   <div>
     <label for="username">Username:</label>
     <input type="text" id="username" formControlName="username" name="username">
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" formControlName="email" name="email">
   </div>
   <div>
     <label for="password">Password:</label>

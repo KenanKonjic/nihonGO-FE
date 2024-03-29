@@ -16,17 +16,18 @@ export class SignupComponent implements OnInit{
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
-      psw: ['', Validators.required]
+      password: ['', Validators.required]
     });
   }
 
   signup() {
     if (this.loginForm.valid) {
       const username = this.loginForm.get('username')?.value;
-      const psw = this.loginForm.get('psw')?.value;
+      const password = this.loginForm.get('password')?.value;
+
       const payload = {
         username: username,
-        password: psw,
+        password: password,
       };
 
       this.http.post<string>('https://nihongo-392fc332c38f.herokuapp.com/signup', payload)

@@ -21,19 +21,19 @@ export class LoginComponent {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
-      psw: ['', Validators.required]
+      password: ['', Validators.required]
     });
   }
 
   login() {
     if (this.loginForm.valid) {
       const username = this.loginForm.get('username')?.value;
-      const psw = this.loginForm.get('psw')?.value;
+      const password = this.loginForm.get('password')?.value;
 
 
       const payload = {
         username: username,
-        password: psw
+        password: password
       };
 
       this.http.post<LoginResponse>('https://nihongo-392fc332c38f.herokuapp.com/authenticate', payload)
@@ -42,7 +42,7 @@ export class LoginComponent {
             this.token = response.token;
             localStorage.setItem('token', this.token);
             localStorage.setItem('username', username);
-            this.router.navigate(['/choose-role']);
+            this.router.navigate(['']);
           },
           (error) => {
             console.error('Login failed', error);

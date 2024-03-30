@@ -1,0 +1,30 @@
+.user-message {
+  color: blue; /* Choose your preferred color for user messages */
+}
+
+.bot-message {
+  color: green; /* Choose your preferred color for bot messages */
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chat-window {
+  max-width: 600px;
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  flex: 1;
+  margin-right: 10px;
+}

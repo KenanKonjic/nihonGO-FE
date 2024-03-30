@@ -20,35 +20,37 @@ export class ChatComponent {
 
   sendMessage(): void {
     if (this.userInput.trim()) {
-      this.messages.push({content: this.userInput, sender: 'User'});
+      const userMessage: Message = { content: '', sender: 'User' };
+      this.messages.push(userMessage);
 
       this.typewriterService.getTypingEffect(this.userInput).subscribe(
         (partialMessage: string) => {
-          this.messages[this.messages.length - 1].content = partialMessage;
+          userMessage.content = partialMessage;
         },
         (error) => {
           console.error('Error:', error);
         },
         () => {
-          this.openAiApiService.getChatResponse(this.userInput).subscribe(
+          this.openAiApiService.getChatResponse(userMessage.content).subscribe(
             (response: any) => {
+              const botMessage: Message = { content: '', sender: 'Bot' };
+              this.messages.push(botMessage);
               this.typewriterService.getTypingEffect(response.choices[0].message.content).subscribe(
                 (botPartialMessage: string) => {
-                  this.messages.push({content: botPartialMessage, sender: 'Bot'});
+                  botMessage.content = botPartialMessage;
                 },
                 (botError) => {
                   console.error('Error:', botError);
-                },
-                () => {
-                  this.messages[this.messages.length - 1].content = response.choices[0].message.content;
                 }
               );
             }
           );
         }
       );
-    }
 
+      this.userInput = '';
+    }
   }
+
 }
 

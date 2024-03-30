@@ -15,11 +15,12 @@ export class ChatComponent {
   constructor(
     private openAiApiService: OpenAiApiService,
     private typewriterService: TypewriterService
-  ) {}
+  ) {
+  }
 
   sendMessage(): void {
     if (this.userInput.trim()) {
-      this.messages.push({ content: this.userInput, sender: 'User' });
+      this.messages.push({content: this.userInput, sender: 'User'});
 
       this.typewriterService.getTypingEffect(this.userInput).subscribe(
         (partialMessage: string) => {
@@ -31,14 +32,23 @@ export class ChatComponent {
         () => {
           this.openAiApiService.getChatResponse(this.userInput).subscribe(
             (response: any) => {
-              this.messages.push({ content: response.choices[0].message.content, sender: 'Bot' });
+              this.typewriterService.getTypingEffect(response.choices[0].message.content).subscribe(
+                (botPartialMessage: string) => {
+                  this.messages.push({content: botPartialMessage, sender: 'Bot'});
+                },
+                (botError) => {
+                  console.error('Error:', botError);
+                },
+                () => {
+                  this.messages[this.messages.length - 1].content = response.choices[0].message.content;
+                }
+              );
             }
           );
         }
       );
-      this.userInput = '';
     }
-  }
 
+  }
 }
 

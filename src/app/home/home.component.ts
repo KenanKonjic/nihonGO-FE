@@ -42,4 +42,9 @@ export class HomeComponent {
     ])
   }
 
+  navigateToChat() {
+    this.router.navigate([
+      'chat'
+    ])
+  }
 }

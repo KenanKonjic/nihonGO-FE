@@ -3,12 +3,13 @@
     <a  (click)="navigateToHome()">NihonGo</a>
   </div>
   <div class="nav">
-    <ng-container *ngIf="!isLoggedIn; else loggedInTemplate">
+    <ng-container *ngIf="!isLoggedIn;">
       <a (click)="navigateToLogin()">LogIn</a>
       <a (click)="navigateToSignup()">Signup</a>
     </ng-container>
-    <ng-template #loggedInTemplate>
-      <a routerLink="/profile">Profile</a>
-    </ng-template>
+    <ng-container *ngIf="isLoggedIn;">
+      <a (click)="navigateToProfile()">Profile</a>
+      <a (click)="logout()">Logout</a>
+    </ng-container>
   </div>
 </header>

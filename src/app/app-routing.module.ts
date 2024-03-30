@@ -17,6 +17,7 @@ import {LoginComponent} from "./login/login.component";
 import {SignupComponent} from "./signup/signup.component";
 import {HeaderComponent} from "./header/header.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {ChatComponent} from "./chat/chat.component";
 
 const routes: Routes = [
   {
@@ -86,6 +87,10 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
+  },
+  {
+    path: 'chat',
+    component: ChatComponent,
   },
 ];
 

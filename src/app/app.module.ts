@@ -21,6 +21,9 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
@@ -41,14 +44,17 @@ import { ProfileComponent } from './profile/profile.component';
     SignupComponent,
     LoginComponent,
     HeaderComponent,
-    ProfileComponent
+    ProfileComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

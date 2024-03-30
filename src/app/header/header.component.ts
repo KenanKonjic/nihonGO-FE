@@ -13,11 +13,9 @@ export class HeaderComponent {
 
   isLoggedIn: boolean = false;
 
-  checkLoginStatus() {
-    this.isLoggedIn = true;
-  }
   logout() {
-    this.isLoggedIn = false;
+    localStorage.clear();
+    this.router.navigate(['']);
   }
   navigateToHome(): void{
     this.router.navigate([
@@ -33,6 +31,9 @@ export class HeaderComponent {
     this.router.navigate([
       'signup'
     ])
+  }
+  navigateToProfile(): void{
+    this.router.navigate(['user-profile']);
   }
 
 }

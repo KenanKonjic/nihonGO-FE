@@ -19,7 +19,8 @@ export class ChatComponent {
 
   sendMessage(): void {
     if (this.userInput.trim()) {
-      this.messages.push({content: this.userInput, sender: 'User' });
+      this.messages.push({ content: this.userInput, sender: 'User' });
+
       this.typewriterService.getTypingEffect(this.userInput).subscribe(
         (partialMessage: string) => {
           this.messages[this.messages.length - 1].content = partialMessage;
@@ -28,7 +29,6 @@ export class ChatComponent {
           console.error('Error:', error);
         },
         () => {
-          // Call the backend to get the full response after the typing effect
           this.openAiApiService.getChatResponse(this.userInput).subscribe(
             (response: any) => {
               this.messages.push({ content: response.choices[0].message.content, sender: 'Bot' });
@@ -39,5 +39,6 @@ export class ChatComponent {
       this.userInput = '';
     }
   }
+
 }
 

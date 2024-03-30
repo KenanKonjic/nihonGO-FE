@@ -13,19 +13,8 @@ export class TypewriterService {
     );
   }
 
-  deleteEffect(word: string, speed = 30): Observable<string> {
-    return interval(speed).pipe(
-      map(i => word.substring(0, word.length - i)),
-      take(word.length)
-    );
+  getTypingEffect(message: string): Observable<string> {
+    return this.typeEffect(message);
   }
 
-  getTypingEffect(message: string): Observable<string> {
-    return concat(
-      this.typeEffect(message),
-      of('').pipe(delay(1000)), // Pause before deleting
-      this.deleteEffect(message),
-      of('').pipe(delay(500)) // Pause before next message
-    ).pipe(repeat());
-  }
 }

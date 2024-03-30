@@ -1,4 +1,3 @@
-<!-- chat.component.html -->
 <div class="chat-container">
   <mat-card class="chat-window">
     <div *ngFor="let message of messages" [ngClass]="{'user-message': message.sender === 'User', 'bot-message': message.sender === 'Bot'}">

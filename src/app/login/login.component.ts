@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AppModule } from '../app.module';
 import { LoginResponse } from './login-response.interface';
 import { Router } from '@angular/router';
+import { UserService } from "../services/auth.service"
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent {
   loginForm!: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router,  public authService: UserService) {
   }
 
   ngOnInit() {
@@ -42,6 +43,7 @@ export class LoginComponent {
             this.token = response.token;
             localStorage.setItem('token', this.token);
             localStorage.setItem('username', username);
+            this.authService.isLoggedIn$.next(true);
             this.router.navigate(['']);
           },
           (error) => {

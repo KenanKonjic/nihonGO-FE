@@ -7,13 +7,21 @@ import {Subscription} from "rxjs";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent{
+export class HeaderComponent implements OnInit{
+  isLoggedIn: boolean = false;
   constructor(private router:Router, public authService: UserService) {
 
   }
 
+  ngOnInit() {
+    this.authService.isLoggedIn$.subscribe(res=>{
+      this.isLoggedIn = this.authService.isLoggedIn();
+    })
+  }
+
   logout() {
     this.authService.logout();
+    this.authService.isLoggedIn$.next(false);
     this.router.navigate(['']);
   }
   navigateToHome(): void{

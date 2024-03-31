@@ -7,27 +7,13 @@ import {Subscription} from "rxjs";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit, OnDestroy{
-  isLoggedIn: boolean;
-  private subscription: Subscription;
+export class HeaderComponent{
   constructor(private router:Router, public authService: UserService) {
 
   }
 
-  ngOnInit(): void {
-    this.subscription = this.authService.isLoggedIn$.subscribe(
-      (loggedIn: boolean) => {
-        this.isLoggedIn = loggedIn;
-      }
-    );
-  }
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
-
   logout() {
-    localStorage.clear();
+    this.authService.logout();
     this.router.navigate(['']);
   }
   navigateToHome(): void{

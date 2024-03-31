@@ -10,12 +10,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
 
-  private loggedIn = new BehaviorSubject<boolean>(this.isLoggedIn());
-
-  get isLoggedIn$(): Observable<boolean> {
-    return this.loggedIn.asObservable();
-    }
-
   private readonly baseUrl: string = `${environment.backendUrl}/user`;
   constructor (private http: HttpClient) { }
 
@@ -32,7 +26,4 @@ export class UserService {
     localStorage.removeItem('auth_token');
   }
 
-  setLoggedIn(value: boolean): void {
-    this.loggedIn.next(value);
-  }
 }

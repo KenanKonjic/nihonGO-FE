@@ -3,11 +3,11 @@
     <a  (click)="navigateToHome()">NihonGo</a>
   </div>
   <div class="nav">
-    <ng-container *ngIf="!isLoggedIn;">
+    <ng-container *ngIf="!authService.isLoggedIn()">
       <a (click)="navigateToLogin()">LogIn</a>
       <a (click)="navigateToSignup()">Signup</a>
     </ng-container>
-    <ng-container *ngIf="isLoggedIn;">
+    <ng-container *ngIf="authService.isLoggedIn()">
       <a (click)="navigateToProfile()">Profile</a>
       <a (click)="logout()">Logout</a>
     </ng-container>

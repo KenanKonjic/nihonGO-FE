@@ -4,11 +4,11 @@
       <strong>{{ message.sender }}:</strong> {{ message.content }}
     </div>
   </mat-card>
-  <div class="input-container">
-    <input matInput placeholder="Type your message here..." [(ngModel)]="userInput">
-    <button mat-icon-button (click)="sendMessage()">
+  <form class="input-container" (ngSubmit)="sendMessage()">
+    <input matInput placeholder="Type your message here..." [(ngModel)]="userInput" name="userInput">
+    <button mat-icon-button type="submit">
       <mat-icon>send</mat-icon>
     </button>
-  </div>
+  </form>
 </div>
 

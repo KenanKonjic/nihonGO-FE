@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-
+import { UserService } from "../services/auth.service"
+import {Subscription} from "rxjs";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit, OnDestroy{
+  isLoggedIn: boolean;
+  private subscription: Subscription;
+  constructor(private router:Router, public authService: UserService) {
 
-  constructor(private router:Router) {
   }
 
-  isLoggedIn: boolean = false;
+  ngOnInit(): void {
+    this.subscription = this.authService.isLoggedIn$.subscribe(
+      (loggedIn: boolean) => {
+        this.isLoggedIn = loggedIn;
+      }
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
   logout() {
     localStorage.clear();

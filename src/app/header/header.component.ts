@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import { UserService } from "../services/auth.service"
 import {Subscription} from "rxjs";
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -15,7 +16,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit() {
     this.authService.isLoggedIn$.subscribe(res=>{
-      this.isLoggedIn = this.authService.isLoggedIn();
+      this.isLoggedIn = res; // Use the value emitted by isLoggedIn$
     })
   }
 

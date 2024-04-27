@@ -9,7 +9,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = new BehaviorSubject<boolean>(this.isLoggedIn());
 
   private readonly baseUrl: string = `${environment.backendUrl}/user`;
   constructor (private http: HttpClient) { }
@@ -19,11 +19,14 @@ export class UserService {
   }
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem('auth_token');
+    const loggedIn = !!localStorage.getItem('auth_token');
+    this.isLoggedIn$.next(loggedIn);
+    return loggedIn;
   }
 
   logout(): void {
     localStorage.removeItem('auth_token');
+    this.isLoggedIn$.next(false);
   }
 
 }

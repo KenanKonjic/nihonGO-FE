@@ -9,10 +9,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  isLoggedIn$ = new BehaviorSubject<boolean>(this.isLoggedIn());
+  isLoggedIn$: BehaviorSubject<boolean>;
 
   private readonly baseUrl: string = `${environment.backendUrl}/user`;
-  constructor (private http: HttpClient) { }
+  constructor (private http: HttpClient) {
+    this.isLoggedIn$ = new BehaviorSubject<boolean>(this.isLoggedIn());
+  }
 
   searchUserByUsername(username: string): Observable<UserModel> {
     return this.http.get<UserModel>(`${this.baseUrl}/search/${username}`);
@@ -20,13 +22,17 @@ export class UserService {
 
   isLoggedIn(): boolean {
     const loggedIn = !!localStorage.getItem('auth_token');
-    this.isLoggedIn$.next(loggedIn);
+    if (this.isLoggedIn$) {
+      this.isLoggedIn$.next(loggedIn);
+    }
     return loggedIn;
   }
 
   logout(): void {
     localStorage.removeItem('auth_token');
-    this.isLoggedIn$.next(false);
+    if (this.isLoggedIn$) {
+      this.isLoggedIn$.next(false);
+    }
   }
 
 }

@@ -1,0 +1,11 @@
+<div *ngIf="testResult === null">
+  <div *ngFor="let question of testQuestions; index as i">
+    <p>{{ question.question }}</p>
+    <input [(ngModel)]="userAnswers[i]" placeholder="Your answer here">
+  </div>
+  <button (click)="submitTest()">Submit Test</button>
+</div>
+
+<div *ngIf="testResult !== null">
+  <p>Your score: {{ testResult }}%</p>
+</div>

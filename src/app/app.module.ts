@@ -25,6 +25,7 @@ import { ChatComponent } from './chat/chat.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
+import { JapaneseTestComponent } from './japanese-test/japanese-test.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {MatIconModule} from "@angular/material/icon";
     LoginComponent,
     HeaderComponent,
     ProfileComponent,
-    ChatComponent
+    ChatComponent,
+    JapaneseTestComponent
   ],
     imports: [
         BrowserModule,

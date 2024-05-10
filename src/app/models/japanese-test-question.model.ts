@@ -1,5 +1,6 @@
 export interface JapaneseTestQuestion {
   question: string;
   answer: string;
-  difficulty: 'easy' | 'medium' | 'hard';
+  difficulty: string;
+  choices: string[];
 }

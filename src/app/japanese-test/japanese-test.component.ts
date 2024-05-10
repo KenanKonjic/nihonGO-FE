@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import { JapaneseTestService } from '../services/japanese-test.service';
 import { JapaneseTestQuestion } from '../models/japanese-test-question.model';
 
@@ -11,6 +11,7 @@ export class JapaneseTestComponent implements OnInit {
   testQuestions: JapaneseTestQuestion[] = [];
   userAnswers: string[] = new Array(10).fill('');
   testResult: number | null = null;
+  currentQuestionIndex: number = 0; // New variable
 
   constructor(private japaneseTestService: JapaneseTestService) {}
 
@@ -28,5 +29,15 @@ export class JapaneseTestComponent implements OnInit {
       }
     }
     this.testResult = (correctAnswers / this.testQuestions.length) * 100;
+    // Save the test result here
+  }
+
+  selectAnswer(answer: string): void {
+    this.userAnswers[this.currentQuestionIndex] = answer;
+    if (this.currentQuestionIndex < this.testQuestions.length - 1) {
+      this.currentQuestionIndex++;
+    } else {
+      this.submitTest();
+    }
   }
 }

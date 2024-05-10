@@ -18,10 +18,12 @@ export class HomeComponent implements OnInit{
 
     this.userService.searchUserByUsername(username)
       .subscribe(user => {
+        console.log(user.hasTakenTest.toString());
         if (!user.hasTakenTest) {
           this.router.navigate(['test']);
         }
       });
+
   }
 
   navigateToHiragana(): void{

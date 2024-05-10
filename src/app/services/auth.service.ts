@@ -17,7 +17,7 @@ export class UserService {
   }
 
   searchUserByUsername(username: string): Observable<UserModel> {
-    return this.http.get<UserModel>(`${this.baseUrl}/search/${username}`);
+    return this.http.get<UserModel>(`${this.baseUrl}/id/${username}`);
   }
 
   isLoggedIn(): boolean {

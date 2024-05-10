@@ -7,7 +7,7 @@ import {environment} from "../../environments/environment";
   providedIn: 'root'
 })
 export class OpenAiApiService {
-  private apiUrl = `${environment.backendUrl}/chat`; // Update with your actual API URL
+  private apiUrl = `${environment.backendUrl}/chat`;
 
   constructor(private http: HttpClient) {}
 

@@ -1,0 +1,8 @@
+<div *ngIf="question">
+  <p>{{ question }}</p>
+  <div *ngFor="let answer of allAnswers; index as i">
+    <input type="radio" id="answer{{ i }}" name="answer" value="{{ answer }}" [(ngModel)]="userAnswer">
+    <label for="answer{{ i }}">{{ answer }}</label><br>
+  </div>
+  <button (click)="submitAnswer()">Submit</button>
+</div>

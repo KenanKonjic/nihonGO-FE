@@ -37,7 +37,8 @@ export class JapaneseTestComponent implements OnInit {
     const updatedUser: UserModel = {
       username: username,
       password: '',
-      hasTakenTest: true
+      hasTakenTest: true,
+      testResult: this.testResult
     };
     this.userService.updateUser(username, updatedUser).subscribe();
   }

@@ -11,7 +11,7 @@ export class CourseGrammarComponent implements OnInit {
   user: UserModel;
   question: string;
   correctAnswer: string;
-  wrongAnswers: string[];
+  wrongAnswers: string[] = [];
   userAnswer: string;
   allAnswers: string[];
 
@@ -34,7 +34,7 @@ export class CourseGrammarComponent implements OnInit {
       (response: any) => {
         this.question = response.question;
         this.correctAnswer = response.correct_answer;
-        this.wrongAnswers = response.wrong_answers;
+        this.wrongAnswers = Array.isArray(response.wrong_answers) ? response.wrong_answers : [];
         this.allAnswers = this.shuffleArray([this.correctAnswer, ...this.wrongAnswers]);
       },
       (error) => {

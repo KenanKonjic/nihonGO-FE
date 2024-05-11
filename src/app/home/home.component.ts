@@ -13,16 +13,18 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit() {
-    // @ts-ignore
-    const username = localStorage.getItem('username').toString();
+    if (localStorage.getItem('username')) {
+      // @ts-ignore
+      const username = localStorage.getItem('username').toString();
 
-    this.userService.searchUserByUsername(username)
-      .subscribe(user => {
-        console.log(user.hasTakenTest.toString());
-        if (!user.hasTakenTest) {
-          this.router.navigate(['test']);
-        }
-      });
+      this.userService.searchUserByUsername(username)
+        .subscribe(user => {
+          console.log(user.hasTakenTest.toString());
+          if (!user.hasTakenTest) {
+            this.router.navigate(['test']);
+          }
+        });
+    }
 
   }
 

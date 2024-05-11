@@ -20,6 +20,10 @@ export class UserService {
     return this.http.get<UserModel>(`${this.baseUrl}/search/${username}`);
   }
 
+  updateUser(username: string, user: UserModel): Observable<UserModel> {
+    return this.http.put<UserModel>(`${this.baseUrl}/update/${username}`, user);
+  }
+
   isLoggedIn(): boolean {
     const loggedIn = !!localStorage.getItem('auth_token');
     if (this.isLoggedIn$) {

@@ -1,6 +1,8 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import { JapaneseTestService } from '../services/japanese-test.service';
+import {UserService} from "../services/auth.service";
 import { JapaneseTestQuestion } from '../models/japanese-test-question.model';
+import {UserModel} from "../models/user.model";
 
 @Component({
   selector: 'app-japanese-test',
@@ -11,9 +13,9 @@ export class JapaneseTestComponent implements OnInit {
   testQuestions: JapaneseTestQuestion[] = [];
   userAnswers: string[] = new Array(10).fill('');
   testResult: number | null = null;
-  currentQuestionIndex: number = 0; // New variable
+  currentQuestionIndex: number = 0;
 
-  constructor(private japaneseTestService: JapaneseTestService) {}
+  constructor(private japaneseTestService: JapaneseTestService, private userService: UserService) {}
 
   ngOnInit(): void {
     this.japaneseTestService.generateTest().then(questions => {
@@ -29,7 +31,15 @@ export class JapaneseTestComponent implements OnInit {
       }
     }
     this.testResult = (correctAnswers / this.testQuestions.length) * 100;
-    // Save the test result here
+
+    // @ts-ignore
+    const username = localStorage.getItem('username').toString();
+    const updatedUser: UserModel = {
+      username: username,
+      password: '',
+      hasTakenTest: true
+    };
+    this.userService.updateUser(username, updatedUser).subscribe();
   }
 
   selectAnswer(answer: string): void {

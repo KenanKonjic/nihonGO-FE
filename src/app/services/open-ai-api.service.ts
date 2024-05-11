@@ -12,6 +12,7 @@ export class OpenAiApiService {
   constructor(private http: HttpClient) {}
 
   getChatResponse(prompt: string): Observable<any> {
+    console.log(prompt);
     return this.http.post(this.apiUrl, { prompt });
   }
 }

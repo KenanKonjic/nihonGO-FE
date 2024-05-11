@@ -17,7 +17,8 @@ export class ProfileComponent {
     this.user = {
       username: '',
       password: '',
-      hasTakenTest: false
+      hasTakenTest: false,
+      testResult: 0
     };
     // @ts-ignore
     this.username = localStorage.getItem('username').toString();

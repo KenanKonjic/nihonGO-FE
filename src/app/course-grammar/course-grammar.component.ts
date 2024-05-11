@@ -14,6 +14,7 @@ export class CourseGrammarComponent implements OnInit {
   wrongAnswers: string[] = [];
   userAnswer: string;
   allAnswers: string[];
+  isLoading: boolean = true;
 
   constructor(private openAiApiService: OpenAiApiService) { }
 
@@ -36,9 +37,11 @@ export class CourseGrammarComponent implements OnInit {
         this.correctAnswer = response.correct_answer;
         this.wrongAnswers = Array.isArray(response.wrong_answers) ? response.wrong_answers : [];
         this.allAnswers = this.shuffleArray([this.correctAnswer, ...this.wrongAnswers]);
+        this.isLoading = false;
       },
       (error) => {
         console.error('Failed to generate question:', error);
+        this.isLoading = false;
       }
     );
   }

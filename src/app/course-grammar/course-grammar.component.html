@@ -1,4 +1,5 @@
-<div *ngIf="question">
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="question && !isLoading">
   <p>{{ question }}</p>
   <div *ngFor="let answer of allAnswers; index as i">
     <input type="radio" id="answer{{ i }}" name="answer" value="{{ answer }}" [(ngModel)]="userAnswer">

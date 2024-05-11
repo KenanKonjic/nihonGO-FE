@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {UserModel} from "../models/user.model";
 import {environment} from "../../environments/environment";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import { BehaviorSubject } from 'rxjs';
 
@@ -10,12 +10,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
   isLoggedIn$: BehaviorSubject<boolean>;
-  private getAuthHeaders(): HttpHeaders {
-    const token = localStorage.getItem('auth_token');
-    return new HttpHeaders({
-      Authorization: `Bearer ${token}`
-    });
-  }
 
   private readonly baseUrl: string = `${environment.backendUrl}/user`;
   constructor (private http: HttpClient) {
@@ -27,7 +21,7 @@ export class UserService {
   }
 
   updateUser(username: string, user: UserModel): Observable<UserModel> {
-    return this.http.put<UserModel>(`${this.baseUrl}/update/${username}`, user, { headers: this.getAuthHeaders() });
+    return this.http.put<UserModel>(`${this.baseUrl}/update/${username}`, user);
   }
 
   isLoggedIn(): boolean {

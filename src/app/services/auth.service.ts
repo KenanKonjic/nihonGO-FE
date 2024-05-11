@@ -10,10 +10,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UserService {
   isLoggedIn$: BehaviorSubject<boolean>;
-
-  getAuthHeaders(): HttpHeaders {
+  private getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('auth_token');
-    return new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return new HttpHeaders({
+      Authorization: `Bearer ${token}`
+    });
   }
 
   private readonly baseUrl: string = `${environment.backendUrl}/user`;

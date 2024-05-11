@@ -33,6 +33,7 @@ export class CourseGrammarComponent implements OnInit {
 
     this.openAiApiService.getChatResponse(message).subscribe(
       (response: any) => {
+        console.log(response);
         this.question = response.question;
         this.correctAnswer = response.correct_answer;
         this.wrongAnswers = Array.isArray(response.wrong_answers) ? response.wrong_answers : [];

@@ -43,6 +43,7 @@ export class LoginComponent {
             this.token = response.token;
             localStorage.setItem('token', this.token);
             localStorage.setItem('username', username);
+            localStorage.setItem('user', JSON.stringify({username: username, token: this.token}));
             this.authService.isLoggedIn$.next(true);
             this.router.navigate(['']);
           },

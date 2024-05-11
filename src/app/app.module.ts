@@ -26,6 +26,10 @@ import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import { JapaneseTestComponent } from './japanese-test/japanese-test.component';
+import { CourseComponent } from './course/course.component';
+import { CourseGrammarComponent } from './course-grammar/course-grammar.component';
+import { CourseVocabularyComponent } from './course-vocabulary/course-vocabulary.component';
+import { CourseReadingComponent } from './course-reading/course-reading.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { JapaneseTestComponent } from './japanese-test/japanese-test.component';
     HeaderComponent,
     ProfileComponent,
     ChatComponent,
-    JapaneseTestComponent
+    JapaneseTestComponent,
+    CourseComponent,
+    CourseGrammarComponent,
+    CourseVocabularyComponent,
+    CourseReadingComponent
   ],
     imports: [
         BrowserModule,

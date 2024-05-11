@@ -19,6 +19,10 @@ import {HeaderComponent} from "./header/header.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {ChatComponent} from "./chat/chat.component";
 import {JapaneseTestComponent} from "./japanese-test/japanese-test.component";
+import {CourseComponent} from "./course/course.component";
+import {CourseGrammarComponent} from "./course-grammar/course-grammar.component";
+import {CourseVocabularyComponent} from "./course-vocabulary/course-vocabulary.component";
+import {CourseReadingComponent} from "./course-reading/course-reading.component";
 
 const routes: Routes = [
   {
@@ -96,6 +100,22 @@ const routes: Routes = [
   {
     path: 'test',
     component: JapaneseTestComponent
+  },
+  {
+    path: 'course',
+    component: CourseComponent
+  },
+  {
+    path: 'course-grammar',
+    component: CourseGrammarComponent
+  },
+  {
+    path: 'course-vocabulary',
+    component: CourseVocabularyComponent
+  },
+  {
+    path: 'course-reading',
+    component: CourseReadingComponent
   },
 ];
 

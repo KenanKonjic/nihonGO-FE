@@ -8,12 +8,16 @@ import {UserService} from "../services/auth.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
+  isLoggedIn: boolean = false;
 
   constructor(private router:Router, private userService: UserService) {
   }
 
   ngOnInit() {
     if (localStorage.getItem('username')) {
+      this.userService.isLoggedIn$.subscribe(res=>{
+        this.isLoggedIn = res;
+      })
       // @ts-ignore
       const username = localStorage.getItem('username').toString();
 
@@ -62,6 +66,11 @@ export class HomeComponent implements OnInit{
   navigateToChat() {
     this.router.navigate([
       'chat'
+    ])
+  }
+  navigateToCourse() {
+    this.router.navigate([
+      'course'
     ])
   }
 }

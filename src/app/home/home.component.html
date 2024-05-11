@@ -28,4 +28,9 @@
     <div class="center">
       <button (click)="navigateToReading()">Reading Practice</button>
     </div>
+    <ng-container *ngIf="isLoggedIn">
+    <div class="center">
+      <button (click)="navigateToCourse()">Your personalized course</button>
+    </div>
+    </ng-container>
   </div>

@@ -1,5 +1,6 @@
+<div class="page-bcg">
 <div class="katakana-test">
-  <h2>Katakana Test</h2>
+  <h1>Katakana Test</h1>
 
   <p class="welcome">Welcome to the Katakana Test! In this test, you will be presented with 20 random katakana symbols,
     and your task is to enter the correct pronunciation for each symbol. You have 3 minutes to complete the test.
@@ -13,11 +14,12 @@
     <div class="question">
       <p>Question {{ currentQuestionIndex }} of {{ totalQuestions }}</p>
       <p>How is this symbol pronounced: <strong>{{ currentSymbol }}</strong></p>
-      <input type="text" [(ngModel)]="userAnswer" (keyup.enter)="submitAnswer()">
+      <input class="answer" type="text" [(ngModel)]="userAnswer" (keyup.enter)="submitAnswer()">
+      <div class="button-container">
       <button (click)="submitAnswer()">Submit</button>
       <button (click)="skipQuestion()">Skip</button>
     </div>
-
+    </div>
     <div class="timer">
       <p>Time Remaining: {{ formatTimeRemaining() }}</p>
     </div>
@@ -46,4 +48,5 @@
 
     <button (click)="retryTest()">Retry Test</button>
   </div>
+</div>
 </div>

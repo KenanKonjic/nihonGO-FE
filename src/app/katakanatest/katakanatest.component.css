@@ -2,21 +2,32 @@
   margin: auto;
   width: 40%;
   padding: 10px;
-  text-align: justify;
-  font-size: large;
+  text-align: center;
+  font-size: 25px;
+
 }
 
 .katakana-test {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin: 20px;
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  line-height: 40px;
 }
 
 .question {
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .timer {
   margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .review {
@@ -52,12 +63,46 @@
 
   .welcome {
     font-size: medium;
-    width: 70%;
+    width: 85%;
   }
 
   .container {
     width: 100%;
     flex-direction: column;
   }
+
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+h1{
+  font-size: 50px;
+}
+
+.answer{
+  padding: 10px;
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+button{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #275073;
+}
+
+.page-bcg{
+  background: url('/assets/images/Screenshot_2024-05-30_22_43_52.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }

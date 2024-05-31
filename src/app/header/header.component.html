@@ -1,11 +1,11 @@
 <header>
   <div class="logo">
-    <a  (click)="navigateToHome()">NihonGo</a>
+    <a  (click)="navigateToHome()"><img ngSrc="/assets/images/Nihon.png" width="70" height="24" alt="logo"></a>
   </div>
   <div class="nav">
     <ng-container *ngIf="!isLoggedIn">
-      <a (click)="navigateToLogin()">LogIn</a>
-      <a (click)="navigateToSignup()">Signup</a>
+      <a (click)="navigateToLogin()">Log In</a>
+      <a (click)="navigateToSignup()">Sign Up</a>
     </ng-container>
     <ng-container *ngIf="isLoggedIn">
       <a (click)="navigateToProfile()">Profile</a>

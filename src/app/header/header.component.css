@@ -2,23 +2,29 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #f2f2f2;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .logo a {
-  font-size: 24px;
+
   font-weight: bold;
   text-decoration: none;
   color: #333;
+  padding-left: 30px;
 }
 
 .nav a {
   margin-left: 10px;
   text-decoration: none;
-  color: #555;
+  color: rgba(255, 142, 139, 0.8);
+  padding-right: 40px;
+  font-weight: bold;
+  font-size: large;
+
+
 }
 
 .nav a:hover {
-  color: #000;
+  color: white;
 }

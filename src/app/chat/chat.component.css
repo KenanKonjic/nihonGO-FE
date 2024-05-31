@@ -1,9 +1,10 @@
 .user-message {
   color: blue; /* Choose your preferred color for user messages */
+  font-weight: bold;
 }
 
 .bot-message {
-  color: green; /* Choose your preferred color for bot messages */
+  color: deeppink/* Choose your preferred color for bot messages */
 }
 
 .chat-container {
@@ -31,12 +32,13 @@
 }
 
 input {
-  width: calc(100% - 100px);
+  width: calc(100% - 35px);
   height: auto;
   padding: 10px 15px;
   border: 2px solid #333;
   border-radius: 5px;
   margin-right: 10px;
+
 }
 
 button {
@@ -48,3 +50,15 @@ button {
   border-radius: 5px;
 }
 
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 40px;
+  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-left: 455px;
+
+
+}

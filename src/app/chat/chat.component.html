@@ -1,4 +1,6 @@
+
 <div class="chat-container">
+  <h1 class="title">Chat with GPT</h1>
   <mat-card class="chat-window">
     <div *ngFor="let message of messages" [ngClass]="{'user-message': message.sender === 'User', 'bot-message': message.sender === 'Bot'}">
       <strong>{{ message.sender }}:</strong> {{ message.content }}

@@ -1,3 +1,4 @@
+<div class="page-bcg">
 <div class="hiragana-test">
   <h1>Hiragana Test</h1>
 
@@ -13,9 +14,11 @@
     <div class="question">
       <p>Question {{ currentQuestionIndex }} of {{ totalQuestions }}</p>
       <p>How is this symbol pronounced: <strong>{{ currentSymbol }}</strong></p>
-      <input type="text" [(ngModel)]="userAnswer" (keyup.enter)="submitAnswer()">
+      <input class="answer" type="text" [(ngModel)]="userAnswer" (keyup.enter)="submitAnswer()">
+      <div class="button-container">
       <button (click)="submitAnswer()">Submit</button>
       <button (click)="skipQuestion()">Skip</button>
+    </div>
     </div>
 
     <div class="timer">
@@ -46,4 +49,5 @@
 
     <button (click)="retryTest()">Retry Test</button>
   </div>
+</div>
 </div>

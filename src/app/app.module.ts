@@ -30,6 +30,7 @@ import { CourseComponent } from './course/course.component';
 import { CourseGrammarComponent } from './course-grammar/course-grammar.component';
 import { CourseVocabularyComponent } from './course-vocabulary/course-vocabulary.component';
 import { CourseReadingComponent } from './course-reading/course-reading.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { CourseReadingComponent } from './course-reading/course-reading.componen
         HttpClientModule,
         MatCardModule,
         MatListModule,
-        MatIconModule
+        MatIconModule,
+        NgOptimizedImage
     ],
   providers: [],
   bootstrap: [AppComponent]

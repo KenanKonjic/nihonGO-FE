@@ -1,7 +1,7 @@
   <div class="reading-practice">
     <h1 class="title">Reading Practice</h1>
     <p class="welcome">Welcome to the Reading Practice page. Improve your reading skills by practicing with various Japanese texts and passages.</p>
-    <div *ngIf="currentPassage">
+    <div class="example" *ngIf="currentPassage">
       <p class="passage">
         <ruby>{{ currentPassage.passage }}<rt>{{ currentPassage.furigana }}</rt></ruby>
       </p>

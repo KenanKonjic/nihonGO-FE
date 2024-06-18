@@ -110,6 +110,10 @@
     flex-direction: column;
   }
 
+  .reading-practice {
+    width: 80%;
+  }
+
 }
 
 .example{

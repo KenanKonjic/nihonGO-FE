@@ -20,13 +20,12 @@
       <button (click)="skipQuestion()">Skip</button>
     </div>
     </div>
-
     <div class="timer">
       <p>Time Remaining: {{ formatTimeRemaining() }}</p>
     </div>
   </div>
 
-  <div *ngIf="testFinished">
+  <div class="testResults" *ngIf="testFinished">
     <h3>Test Results</h3>
 
     <div class="summary">

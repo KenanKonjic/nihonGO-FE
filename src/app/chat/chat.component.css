@@ -59,6 +59,37 @@ button {
   padding-bottom: 30px;
   padding-top: 40px;
   padding-left: 455px;
+}
 
+@media (max-width: 768px) {
+  .chat-container {
+    width: 90%;
+    margin: 50px auto auto;
+    border: 3px solid #333;
+  }
 
+  .chat-window {
+    height: 300px;
+    padding: 10px;
+  }
+
+  .input-container {
+    padding: 5px;
+  }
+
+  input {
+    width: calc(100% - 25px);
+    padding: 5px 10px;
+  }
+
+  button {
+    padding: 5px 10px;
+  }
+
+  .title {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-left: 0;
+    font-size: 30px;
+  }
 }

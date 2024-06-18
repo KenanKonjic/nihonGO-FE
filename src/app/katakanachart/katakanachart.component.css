@@ -94,3 +94,50 @@
   background: url('/assets/images/fuji.png') no-repeat center center fixed;
 
 }
+
+@media (max-width: 768px) {
+  .hiragana-chart, .katakana-chart {
+    width: 85%;
+    padding: 20px;
+    margin-left: 5%;
+  }
+
+  .hiragana-chart table, .katakana-chart table {
+    width: 100%;
+  }
+
+  .hiragana-chart th, .katakana-chart th {
+    padding: 5px;
+  }
+
+  .hiragana-chart td, .katakana-chart td {
+    padding: 5px;
+  }
+
+  .hiragana-chart .title, .katakana-chart .title {
+    font-size: 30px;
+  }
+
+  .hiragana-chart .kana, .katakana-chart .kana {
+    font-size: 20px;
+  }
+
+  .hiragana-chart .romaji, .katakana-chart .romaji {
+    font-size: 12px;
+  }
+
+  .chart {
+    width: 100%;
+  }
+
+  .welcome {
+    font-size: medium;
+    width: 100%;
+  }
+
+  .title {
+    font-size: xx-large;
+    padding: 10px;
+    width: 100%;
+  }
+}

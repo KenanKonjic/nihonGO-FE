@@ -12,7 +12,7 @@
     <div class="container">
       <div class="selection">
       <div class="center">
-        <button class="chat" (click)="navigateToChat()">Chat</button>
+        <button (click)="navigateToChat()">Chat</button>
       </div>
       <div class="center">
         <button (click)="navigateToHiragana()">Learn Hiragana</button>
@@ -33,7 +33,7 @@
         <button (click)="navigateToReading()">Reading Practice</button>
       </div>
       <ng-container *ngIf="isLoggedIn">
-        <div class="personalized">
+        <div class="center">
           <button (click)="navigateToCourse()">Your personalized course</button>
         </div>
       </ng-container>

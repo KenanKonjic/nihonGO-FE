@@ -52,7 +52,6 @@ export class HiraganaquizComponent implements OnInit{
     } else {
       this.incorrectAnswers++;
       this.streak = 0;
-      // alert(`Wrong! The correct answer is "${this.correctCharacter}".`);
     }
     this.showNextQuestion();
   }

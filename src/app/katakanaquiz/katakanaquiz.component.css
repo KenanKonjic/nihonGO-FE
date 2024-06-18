@@ -83,4 +83,9 @@
     width: 40%;
   }
 
+  .multiple-choice {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }

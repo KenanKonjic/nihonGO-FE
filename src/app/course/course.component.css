@@ -12,7 +12,6 @@
   padding: 10px;
   text-align: justify;
   font-size: large;
-
 }
 
 .container {
@@ -28,6 +27,9 @@
   margin: auto;
 }
 
+.all{
+  margin-top: 20px;
+}
 
 @media (max-width: 768px) {
   .title {

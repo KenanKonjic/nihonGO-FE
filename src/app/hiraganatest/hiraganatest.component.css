@@ -17,6 +17,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 15px;
   line-height: 40px;
+  width: 100%;
 }
 
 .question {
@@ -32,10 +33,20 @@
 
 .review {
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.testResults{
+width: 100%;
 }
 
 .review div {
   margin-bottom: 10px;
+  padding:12px;
+  max-width: 200px;
+  width: 100%;
 }
 
 .correct {
@@ -50,7 +61,7 @@
   border-radius: 8px;
 }
 
-.summary p {
+.summary  {
   margin: 5px;
 }
 
@@ -95,7 +106,6 @@ button{
   border-radius: 10px;
 }
 .page-bcg{
-  background: url('/assets/images/basic-japanese-pronunciation-2-91cbac0a.jpg') no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -103,4 +113,40 @@ button{
   justify-content: center;
   align-items: center;
 
+}
+
+@media (max-width: 768px) {
+  .hiragana-test {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+
+  .review div {
+    max-width: 100%;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .answer {
+    width: 100%;
+  }
+
+  button {
+    padding: 10px;
+    width: 100%;
+  }
 }
